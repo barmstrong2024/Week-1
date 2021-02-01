@@ -6,14 +6,22 @@
 //
 
 import UIKit
+//this is given to us to use user interface stuff
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("😎😎 viewDidLoad has executed!", Date()
+        )
     }
 
 
+    @IBAction func showMessagePressed(_ sender: UIButton) {
+        print("👉👉 the show message button was pressed", Date())
+        messageLabel.text = "You Are Awesome!"
+    }
 }
 
